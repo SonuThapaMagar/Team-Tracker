@@ -12,7 +12,8 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background: whitesmoke;
+    background-image: url(./img/bg.jpg);
+    background-size: 100%;
   }
   .container {
     position: relative;
