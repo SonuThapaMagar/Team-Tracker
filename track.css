@@ -39,6 +39,11 @@ body {
   .input-box label {
     color: #333;
   }
+  .form{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
   .form :where(.input-box input) {
     position: relative;
     height: 50px;
@@ -56,18 +61,20 @@ body {
   }
   .form button {
     height: 55px;
-    width: 100%;
+    width: 30%;
     color: #fff;
     font-size: 1rem;
     font-weight: 400;
     margin-top: 30px;
+    border-radius: 0.5rem;
     border: none;
+    align-items: center;
     cursor: pointer;
     transition: all 0.2s ease;
-    background: rgb(130, 106, 251);
+    background: #0250fa;
   }
   .form button:hover {
-    background: rgb(88, 56, 250);
+    background:#0250fa
   }
   /*Responsive*/
   @media screen and (max-width: 500px) {
