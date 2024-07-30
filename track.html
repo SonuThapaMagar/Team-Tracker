@@ -2,40 +2,40 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Reading Tracking Time</title>
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Book Reading Time Tracking</title>
+    <!---Custom CSS File--->
+    <link rel="stylesheet" href="/track.css" />
 </head>
 
 <body>
-    <div class="container">
-        <h1>Book Reading Tracker</h1>
-        <div class="form">
-            <form action="" method="">
-                <div class="form-group">
-                    <label for="bookName">Book Name</label>
-                    <input type="text" id="bookName" name="bookName" required>
-                </div>
+    <section class="container">
+        <header>Book Reading Tracker</header>
+        <form action="#" method="post" class="form">
+            <div class="input-box">
+                <label>Book Name</label>
+                <input type="text" name="bookName" id="bookName" required />
+            </div>
 
-                <div class="form-group">
-                    <label for="bookAuthor">Book Author</label>
-                    <input type="text" id="bookAuthor" name="bookAuthor" required>
-                </div>
+            <div class="input-box">
+                <label>Book Author</label>
+                <input type="text" name="bookAuthor" id="bookAuthor" required />
+            </div>
 
-                <div class="form-group">
-                    <label for="bookPage">Book Pages</label>
-                    <input type="number" id="bookPage" name="bookPage" required>
-                </div>
+            <div class="input-box">
+                <label>Book Pages</label>
+                <input type="number" name="bookPages" id="bookPages" required />
+            </div>
 
-                <div class="form-group">
-                    <label for="timeSpent">Time Spent</label>
-                    <input type="number" id="timeSpent" name="timeSpent" min="1" step="1"
-                        placeholder="Enter time in minutes" required>
-                </div>
-            </form>
-        </div>
-    </div>
+            <div class="input-box">
+                <label>Time Spent</label>
+                <input type="number" name="timeSpent" id="timeSpent" min="1" step="1" required />
+            </div>
+            <button type="Submit">Track Time</button>
+        </form>
+    </section>
 </body>
 
 </html>
