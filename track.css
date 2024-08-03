@@ -1,11 +1,13 @@
 /* Import Google font - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
+
 body {
     min-height: 100vh;
     display: flex;
@@ -13,11 +15,93 @@ body {
     justify-content: center;
     padding: 20px;
     background-image: url(./img/bg.jpg);
-    background-size: cover; 
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-  }
-  .container {
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 2;
+}
+
+.sidebar-header {
+    padding: 10px;
+    background: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-header h2 {
+    margin-left: 10px;
+}
+
+.close-btn {
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    padding: 10px 15px;
+}
+
+.sidebar-menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar-menu li a:hover {
+    background: #575757;
+}
+
+/* Main Content Styles */
+.main-content {
+    transition: margin-left 0.5s;
+    padding: 20px;
+}
+
+.open-btn {
+    font-size: 20px;
+    background: #0250fa;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+
+.open-btn:hover {
+    background: #0056ff;
+}
+
+/* Container Styles */
+.container {
     position: relative;
     max-width: 700px;
     width: 100%;
@@ -25,29 +109,35 @@ body {
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  }
-  .container header {
+}
+
+.container header {
     font-size: 1.5rem;
     color: #333;
     font-weight: 500;
     text-align: center;
-  }
-  .container .form {
+}
+
+.container .form {
     margin-top: 30px;
-  }
-  .form .input-box {
+}
+
+.form .input-box {
     width: 100%;
     margin-top: 20px;
-  }
-  .input-box label {
+}
+
+.input-box label {
     color: #333;
-  }
-  .form{
+}
+
+.form {
     align-items: center;
     display: flex;
     flex-direction: column;
-  }
-  .form :where(.input-box input) {
+}
+
+.form :where(.input-box input) {
     position: relative;
     height: 50px;
     width: 100%;
@@ -58,11 +148,13 @@ body {
     border: 1px solid #ddd;
     border-radius: 6px;
     padding: 0 15px;
-  }
-  .input-box input:focus {
+}
+
+.input-box input:focus {
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-  }
-  .form button {
+}
+
+.form button {
     height: 55px;
     width: 30%;
     color: #fff;
@@ -75,14 +167,26 @@ body {
     cursor: pointer;
     transition: all 0.2s ease;
     background: #0250fa;
-  }
-  .form button:hover {
-    background:#0250fa
-  }
-  /*Responsive*/
-  @media screen and (max-width: 500px) {
-    .form .column {
-      flex-wrap: wrap;
+}
+
+.form button:hover {
+    background: #0250fa;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .main-content {
+        padding: 10px;
     }
-    
-  }
+
+    .open-btn {
+        font-size: 18px;
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .form .column {
+        flex-wrap: wrap;
+    }
+}
