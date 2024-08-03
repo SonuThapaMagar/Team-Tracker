@@ -1,11 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>View Book</title>
+    <!---Custom CSS File--->
+    <link rel="stylesheet" href="/track.css" />
+    <link rel="stylesheet" href="sidebar.css">
 </head>
+
 <body>
-    
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Menu</h2>
+            <button class="close-btn" id="close-btn">&times;</button>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="track.html">Add Book</a></li>
+            <li><a href="view.html">View Book</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <!-- Toggle Button -->
+        <button class="open-btn" id="open-btn">&#9776; Open Sidebar</button>
+
+        <section class="container">
+            <header>Book List</header>
+            <!--Form Started-->
+            
+        </section>
+    </div>
+
+    <!-- JavaScript for Sidebar Toggle -->
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const openBtn = document.getElementById('open-btn');
+        const closeBtn = document.getElementById('close-btn');
+
+        openBtn.addEventListener('click', () => {
+            sidebar.style.width = '250px';
+            document.getElementById('main-content').style.marginLeft = '250px';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            sidebar.style.width = '0';
+            document.getElementById('main-content').style.marginLeft = '0';
+        });
+    </script>
 </body>
+
 </html>
